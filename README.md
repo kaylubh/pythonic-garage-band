@@ -12,7 +12,7 @@
 
 1. Install packages
 
-    `pip install -r requirements.txt` (only required if you want to run tests)
+    `pip install -r requirements.txt`
 
 #### Run
 
