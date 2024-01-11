@@ -13,8 +13,9 @@ class Band:
 
   members = []
 
-  def __init__(self, name):
+  def __init__(self, name, members = None):
     self.name = name
+    self.members = members or []
     
 class Guitarist(Musician):
   """
