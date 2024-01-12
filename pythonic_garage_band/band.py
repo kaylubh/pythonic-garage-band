@@ -2,7 +2,14 @@ from abc import ABC, abstractclassmethod
 
 class Musician(ABC):
   """
+  An abstract class to represent a musician
 
+  Attributes:
+    name (str): name of the musician
+  
+  Methods:
+    get_instrument(): returns the musicians instrument
+    play_solo(): returns the musicians solo
   """
 
   def __init__(self, name):
@@ -24,7 +31,16 @@ class Musician(ABC):
 
 class Band:
   """
+  Represents a band
+
+  Attributes:
+    name (str): name of the band
+    members (list): list of members of the band, each member should be of the Musician class
+    instances (list): list of the number of instances of Band
   
+  Methods:
+    play_solos(): returns a list of the solo attribute for each member of the band
+    to_list(): returns a list of the number of instances of Band
   """
 
   instances = []
@@ -49,7 +65,14 @@ class Band:
     
 class Guitarist(Musician):
   """
+  Represents a guitarist. Extends Musician class.
+
+  Attributes:
+    name (str): name of the guitarist
   
+  Methods:
+    get_instrument(): returns 'guitar'
+    play_solo(): returns the guitarist solo
   """
 
   def __init__(self, name):
@@ -63,7 +86,14 @@ class Guitarist(Musician):
 
 class Bassist(Musician):
   """
+  Represents a bassist. Extends Musician class.
+
+  Attributes:
+    name (str): name of the bassist
   
+  Methods:
+    get_instrument(): returns 'bass'
+    play_solo(): returns the bassist solo
   """
 
   def __init__(self, name):
@@ -77,7 +107,14 @@ class Bassist(Musician):
 
 class Drummer(Musician):
   """
+  Represents a drummer. Extends Musician class.
+
+  Attributes:
+    name (str): name of the drummer
   
+  Methods:
+    get_instrument(): returns 'drums'
+    play_solo(): returns the drummer solo
   """
 
   def __init__(self, name):
