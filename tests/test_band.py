@@ -6,6 +6,7 @@ from pythonic_garage_band.band import (
     Guitarist,
     Bassist,
     Drummer,
+    Keyboardist
 )
 
 
@@ -218,17 +219,17 @@ def test_from_yaml():
 
 
 # @pytest.mark.skip("stretch")
-# def test_abstract_musician():
-#     with pytest.raises(TypeError):
-#         Musician("nobody", "nothing", "silence")
+def test_abstract_musician():
+    with pytest.raises(TypeError):
+        Musician("nobody", "nothing", "silence")
 
 
-# @pytest.mark.skip("stretch")
-# def test_incomplete_keyboardist():
-#     with pytest.raises(TypeError) as e:
-#         Keyboardist("Booker T. Jones")
+@pytest.mark.skip("stretch")
+def test_incomplete_keyboardist():
+    with pytest.raises(TypeError) as e:
+        Keyboardist("Booker T. Jones")
 
-#     assert (
-#         repr(e)
-#         == """<ExceptionInfo TypeError("Can't instantiate abstract class Keyboardist with abstract method some_method_that_must_be_implemented_in_base_class") tblen=1>"""  # noqa: E501
-#     )
+    assert (
+        repr(e)
+        == """<ExceptionInfo TypeError("Can't instantiate abstract class Keyboardist with abstract method some_method_that_must_be_implemented_in_base_class") tblen=1>"""  # noqa: E501
+    )

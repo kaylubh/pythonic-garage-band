@@ -1,6 +1,8 @@
-class Musician:
+from abc import ABC, abstractclassmethod
+
+class Musician(ABC):
   """
-  
+
   """
 
   def __init__(self, name):
@@ -11,6 +13,14 @@ class Musician:
   
   def __repr__(self):
     return f'{self.__class__.__name__} instance. Name = {self.name}'
+  
+  @abstractclassmethod
+  def get_instrument():
+    pass
+
+  @abstractclassmethod
+  def play_solo():
+    pass
 
 class Band:
   """
@@ -78,3 +88,8 @@ class Drummer(Musician):
   
   def play_solo(self):
     return 'rattle boom crash'
+
+class Keyboardist(Musician):
+  
+  def __init__(self, name):
+    super().__init__(name)
