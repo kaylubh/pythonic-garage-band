@@ -78,10 +78,12 @@ class Guitarist(Musician):
   def __init__(self, name):
     super().__init__(name)
   
-  def get_instrument(self):
+  @staticmethod
+  def get_instrument():
     return 'guitar'
   
-  def play_solo(self):
+  @staticmethod
+  def play_solo():
     return 'face melting guitar solo'
 
 class Bassist(Musician):
@@ -99,10 +101,12 @@ class Bassist(Musician):
   def __init__(self, name):
     super().__init__(name)
   
-  def get_instrument(self):
+  @staticmethod
+  def get_instrument():
     return 'bass'
   
-  def play_solo(self):
+  @staticmethod
+  def play_solo():
     return 'bom bom buh bom'
 
 class Drummer(Musician):
@@ -120,10 +124,12 @@ class Drummer(Musician):
   def __init__(self, name):
     super().__init__(name)
   
-  def get_instrument(self):
+  @staticmethod
+  def get_instrument():
     return 'drums'
   
-  def play_solo(self):
+  @staticmethod
+  def play_solo():
     return 'rattle boom crash'
 
 class Keyboardist(Musician):
